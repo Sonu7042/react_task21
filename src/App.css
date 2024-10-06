@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, red, blue) border-box;
+
+  animation: borderAnimation 0.5s infinite;
+}
+
+.imgDiv {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+h1,
+p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Keyframes for border gradient animation */
+@keyframes borderAnimation {
+  0% {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, red, blue) border-box;
+  }
+ 
+  25% {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to top, blue, red) border-box;
+  }
+
+  50% {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(to left, red,blue, ) border-box;
+  }
+
+  75% {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, blue, red) border-box;
+  }
+}
